@@ -28,14 +28,14 @@ public class Biblioteka implements BibliotekaInterfejs{
 	public List<Knjiga> VratiSveKnjige() {
 		return knjige;
 	}
+		
 
 	@Override
 	public List<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac) {
-		if (autor == null && ISBN < 0 && naslov == null && izdavac == null)
-			return knjige;
+		if (autor==null && ISBN<=0&& naslov==null && izdavac==null)
+			throw new IllegalArgumentException("Morate uneti bar neki kriterijum za pretragu");
 		
 		List<Knjiga> rezultati = new ArrayList<Knjiga>();
-		
 		if (naslov!=null)
 		  for (Knjiga k: knjige)
 			if (k.getNaslov().toLowerCase().contains(naslov.toLowerCase().trim()))
