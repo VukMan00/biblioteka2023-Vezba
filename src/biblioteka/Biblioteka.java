@@ -5,8 +5,19 @@ import java.util.List;
 
 import biblioteka.interfejs.BibliotekaInterfejs;
 
+/**
+ * Implementira BibliotekuInterfejs, pri cemu je lista sa knjigama
+ * implementirana preko ArrayList-e
+ * 
+ * 
+ * @author Vuk Manojlovic
+ *
+ */
 public class Biblioteka implements BibliotekaInterfejs{
 
+	/**
+	 * Lista sa knjigama koje biblioteka poseduje - ArrayList implementacija
+	 */
 	private List<Knjiga> knjige = new ArrayList<>();
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
