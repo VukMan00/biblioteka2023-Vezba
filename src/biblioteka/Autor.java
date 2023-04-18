@@ -93,6 +93,7 @@ public class Autor {
 	/**
 	 * Poredi dva autora prema imenu i prezimenu kao i prema objektima
 	 * 
+	 * @param obj objekat klase Autor sa kojom se poredjuje.
 	 * @return
 	 * <ul>
 	 * <li>true-Ako je unet isti objekat ili ako su ime i prezime isti</li>
